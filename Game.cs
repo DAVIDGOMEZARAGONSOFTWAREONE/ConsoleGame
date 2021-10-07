@@ -2,7 +2,7 @@ using System;
 
 namespace ConsoleGame
 {
-  class Game : SuperGame
+  internal class Game : SuperGame
   {
     public new static void UpdatePosition(string KeyPressed,out int X,out int Y){
       X=0;
