@@ -4,6 +4,7 @@ namespace ConsoleGame
 {
   internal class Game : SuperGame
   {
+    // Mover cursor
     public new static void UpdatePosition(string KeyPressed,out int X,out int Y){
       X=0;
       Y=0;
@@ -19,6 +20,7 @@ namespace ConsoleGame
       }
     }
 
+    // Actualizar sentido del cursor
     public new static char UpdateCursor(string KeyPressed){
       char Symbol='0';
       switch(KeyPressed){
@@ -34,6 +36,7 @@ namespace ConsoleGame
       return Symbol;
     }
 
+    // Gestionar los límites del tablero
     public new static int KeepInBounds(int Coordinate, int MaxValue){
       int Keep=0;
       if(Coordinate>=MaxValue){
@@ -46,6 +49,7 @@ namespace ConsoleGame
       return Keep;
     }
 
+    // Jugador anota un punto
     public new static bool DidScore(int XChar, int YChar,int XFruit,int YFruit ){
       bool control=false;
       if (XChar==XFruit && YChar==YFruit){
